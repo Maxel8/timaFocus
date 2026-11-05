@@ -60,10 +60,11 @@ main {
 }
 
 #timer {
-    font-size: clamp(40px, 6vw, 160px);
+    font-size: clamp(50px, 6vw, 160px);
     font-weight: 500;
     color: var(--color-primary);
     margin-bottom: 40px;
+    font-variant-numeric: tabular-nums;
 }
 
 button {
@@ -75,16 +76,57 @@ button {
     margin: 4px;
 }
 
-#start {
+#toggle {
     background: var(--color-accent);
     color: white;
 }
 
-#pause, #reset {
+#reset {
     background: var(--color-surface);
     color: var(--color-text);
 }
 
 button:hover {
     opacity: 0.85;
+}
+
+#time-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+#time-input input {
+    width: clamp(40px, 4vw, 80px);
+    padding: 12px 6px;
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    color: var(--color-text);
+    font-size: clamp(20px, 2vw, 40px);
+    font-weight: 600;
+    text-align: center;
+
+    outline: none;
+}
+
+#time-input input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.15);
+}
+
+#status {
+    color: var(--color-success);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+#timer.finished {
+    color: var(--color-success);
 }

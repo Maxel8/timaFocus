@@ -8,17 +8,15 @@ timaFocus is a minimal browser-based focus timer designed to help you concentrat
 
 - [x] 30-second countdown
 - [x] Start, pause and reset controls
-- [ ] Custom timer durations
-- [ ] Visual feedback when the timer ends
+- [x] Custom timer durations
+- [x] Visual feedback when the timer ends
 - [ ] Dark mode
 
 ## Planned Features
 
 The next development steps are:
 
-1. **Custom durations** – Choose your own focus time instead of being limited to 30 seconds.
-2. **Visual feedback** – Get a clear visual notification when the countdown reaches zero.
-3. **Dark mode** – Switch between light and dark themes.
+1. **Dark mode** – Switch between light and dark themes.
 
 ## Tech Stack
 
