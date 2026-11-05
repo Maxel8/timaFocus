@@ -119,3 +119,14 @@ button:hover {
     border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.15);
 }
+
+#status {
+    color: var(--color-success);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+#timer.finished {
+    color: var(--color-success);
+}

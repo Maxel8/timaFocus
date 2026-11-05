@@ -1,8 +1,9 @@
 const timer = document.querySelector("#timer");
-const toggle = document.querySelector("#toggle"); 
+const toggle = document.querySelector("#toggle");
 const reset = document.querySelector("#reset");
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
+const status = document.querySelector("#status");
 
 let time = 1500;
 let time_left = time;
@@ -32,6 +33,8 @@ function updateTime() {
     time_left = time;
 
     timer.textContent = formatTime(time_left);
+    status.textContent = "";
+    timer.classList.remove("finished");
 }
 
 // BUTTON 1 (Start, Pause, Fortsetzen)
@@ -50,10 +53,16 @@ toggle.addEventListener("click", () => {
             if (time_left > 0) {
                 time_left--;
                 timer.textContent = formatTime(time_left);
-            } else {
-                clearInterval(interval);
-                interval = null;
-                toggle.textContent = "Start";
+
+                if (time_left === 0) {
+                    clearInterval(interval);
+                    interval = null;
+
+                    toggle.textContent = "Start";
+
+                    status.textContent = "Fokuszeit abgeschlossen!";
+                    timer.classList.add("finished");
+                }
             }
         }, 1000);
 
@@ -73,6 +82,9 @@ reset.addEventListener("click", () => {
     interval = null;
 
     toggle.textContent = "Start";
+
+    status.textContent = "";
+    timer.classList.remove("finished");
 
     updateTime();
 });
