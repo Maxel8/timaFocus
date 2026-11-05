@@ -5,6 +5,16 @@ All notable changes to timaFocus are documented here.
 
 ## [Unreleased]
 
+
+## [0.2.1] - 2026-11-05
+
+### Added
+
+- Added Open Graph metadata for link previews when sharing the website
+- Added favicon for browsers
+- Added Apple Touch Icon for iOS home screen
+- Added `robots.txt` to guide search engine crawlers
+
 ## [0.2.0] - 2026-11-05
 
 ### Added
