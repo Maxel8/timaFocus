@@ -1,0 +1,17 @@
+{
+  "name": "timaFocus",
+  "short_name": "timaFocus",
+  "description": "Ein minimalistischer Fokus-Timer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#14243A",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
