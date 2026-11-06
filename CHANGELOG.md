@@ -5,6 +5,7 @@ All notable changes to timaFocus are documented here.
 
 ## [Unreleased]
 
+- Added dynamic browser tab title
 
 ## [0.2.1] - 2026-11-05
 

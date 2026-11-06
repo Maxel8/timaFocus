@@ -17,8 +17,14 @@ function formatTime(seconds) {
     return `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
 }
 
-// Anzeige aktualisieren
+// Tab-Titel aktualisieren
+function updateTitle(text = formatTime(time_left)) {
+    document.title = `${text} | timaFocus`;
+}
+
+// Anzeige initialisieren
 timer.textContent = formatTime(time_left);
+updateTitle();
 
 // Eingabe übernehmen
 function updateTime() {
@@ -35,6 +41,8 @@ function updateTime() {
     timer.textContent = formatTime(time_left);
     status.textContent = "";
     timer.classList.remove("finished");
+
+    updateTitle();
 }
 
 // BUTTON 1 (Start, Pause, Fortsetzen)
@@ -48,11 +56,14 @@ toggle.addEventListener("click", () => {
         if (time_left <= 0) return;
 
         toggle.textContent = "Pause";
+        updateTitle();
 
         interval = setInterval(() => {
             if (time_left > 0) {
                 time_left--;
+
                 timer.textContent = formatTime(time_left);
+                updateTitle();
 
                 if (time_left === 0) {
                     clearInterval(interval);
@@ -62,6 +73,8 @@ toggle.addEventListener("click", () => {
 
                     status.textContent = "Fokuszeit abgeschlossen!";
                     timer.classList.add("finished");
+
+                    updateTitle("Fertig!");
                 }
             }
         }, 1000);
@@ -72,11 +85,11 @@ toggle.addEventListener("click", () => {
         interval = null;
 
         toggle.textContent = "Fortsetzen";
+        updateTitle("Pausiert");
     }
 });
 
-
-//BUTTON 2 (Reset)
+// BUTTON 2 (Reset)
 reset.addEventListener("click", () => {
     clearInterval(interval);
     interval = null;
