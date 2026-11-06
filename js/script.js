@@ -11,6 +11,16 @@ let time_left = time;
 let endTime = null;
 let interval = null;
 
+
+// Service Worker
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js")
+            .then(() => console.log("Service Worker registriert"))
+            .catch(error => console.error("Service Worker Fehler:", error));
+    });
+}
+
 // Zeit formatieren (MM:SS)
 function formatTime(seconds) {
     const min = Math.floor(seconds / 60);
