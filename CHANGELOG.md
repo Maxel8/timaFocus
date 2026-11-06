@@ -5,9 +5,12 @@ All notable changes to timaFocus are documented here.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-06
+
 ### Added
 
 - Added dynamic browser tab title
+- Added the possebility to install timaFocus as a Progressive Web App (PWA)
 
 ### Changed
 
