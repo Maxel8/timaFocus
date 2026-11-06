@@ -5,7 +5,14 @@ All notable changes to timaFocus are documented here.
 
 ## [Unreleased]
 
+### Added
+
 - Added dynamic browser tab title
+
+### Changed
+
+- Improved timer accuracy (timestamp-based time calculation)
+
 
 ## [0.2.1] - 2026-11-05
 
